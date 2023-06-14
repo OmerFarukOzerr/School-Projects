@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="art" type="com.example.artbook.view.database.Model" />
+
+    </data>
+
+
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/rowImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        tools:srcCompat="@tools:sample/avatars"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="7dp">
+
+        <TextView
+            android:id="@+id/rowArtNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{art.artName}"
+            android:textStyle="bold"
+            android:layout_margin="6dp"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/rowArtistNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{art.artistName}"
+            android:layout_gravity="center"
+            android:layout_margin="6dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/rowYearTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{art.year.toString()}"
+            android:layout_gravity="center"
+            android:layout_margin="6dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+</layout>

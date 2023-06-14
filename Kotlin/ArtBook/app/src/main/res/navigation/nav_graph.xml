@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/arts">
+
+    <fragment
+        android:id="@+id/arts"
+        android:name="com.example.artbook.view.uı.Arts"
+        android:label="Arts" >
+        <action
+            android:id="@+id/action_arts_to_artsDetail"
+            app:destination="@id/ArtsDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/artsImage"
+        android:name="com.example.artbook.view.uı.ArtsImage"
+        android:label="ArtsImage" />
+    <fragment
+        android:id="@+id/ArtsDetail"
+        android:name="com.example.artbook.view.uı.ArtsDetail"
+        android:label="ArtsDetail" >
+        <action
+            android:id="@+id/action_artsDetail_to_artsImage"
+            app:destination="@id/artsImage" />
+    </fragment>
+</navigation>
