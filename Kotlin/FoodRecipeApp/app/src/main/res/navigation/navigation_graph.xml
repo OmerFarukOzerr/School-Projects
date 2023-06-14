@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/tarif_liste">
+
+    <fragment
+        android:id="@+id/tarif_kaydet"
+        android:name="com.ofo.yemektariflerikitabi.tarif_kaydet"
+        android:label="fragment_tarif_kaydet"
+        tools:layout="@layout/fragment_tarif_kaydet" >
+        <action
+            android:id="@+id/action_tarif_kaydet_to_tarif_liste"
+            app:destination="@id/tarif_liste" />
+        <argument
+            android:name="boolean"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/tarif_liste"
+        android:name="com.ofo.yemektariflerikitabi.tarif_liste"
+        android:label="fragment_tarif_liste"
+        tools:layout="@layout/fragment_tarif_liste" >
+        <action
+            android:id="@+id/action_tarif_liste_to_tarif_kaydet"
+            app:destination="@id/tarif_kaydet" />
+    </fragment>
+</navigation>
