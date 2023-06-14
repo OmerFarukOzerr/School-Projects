@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/first_fragment">
+
+    <fragment
+        android:id="@+id/first_fragment"
+        android:name="com.ofo.fragment_ileri.first_fragment"
+        android:label="first_fragment" >
+        <action
+            android:id="@+id/action_first_fragment_to_second_fragment"
+            app:destination="@id/second_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/second_fragment"
+        android:name="com.ofo.fragment_ileri.second_fragment"
+        android:label="second_fragment" >
+        <action
+            android:id="@+id/action_second_fragment_to_first_fragment"
+            app:destination="@id/first_fragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".second_fragment"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/sfTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="İkinci Fragment"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:textColor="#000000">
+    </TextView>
+
+    <Button
+        android:id="@+id/sfButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:onClick="sfDön"
+        android:textSize="17dp"
+        android:text="İlk Fragment'a dön">
+
+    </Button>
+
+</LinearLayout>
+
+
+</layout>
